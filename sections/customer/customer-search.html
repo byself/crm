@@ -1,0 +1,151 @@
+<template class="task-template">
+  <section id="customer-search-section" class="section js-section u-category-customer">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-communication"></use></svg>
+          搜索
+        </h1>
+        <main class="search-form-container">
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-item">
+                <label>征信状况：</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="F-search"><input id="F-search" type="checkbox" name="creditStatus" value="5" />打卡工资</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="G-search"><input id="G-search" type="checkbox" name="creditStatus" value="6" />公积金</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="H-search"><input id="H-search" type="checkbox" name="creditStatus" value="7" />平安保险</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="I-search"><input id="I-search" type="checkbox" name="creditStatus" value="8" />房贷</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="J-search"><input id="J-search" type="checkbox" name="creditStatus" value="9" />车贷</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col ">
+              <div class="form-item">
+                <label>学历：</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="M-search"><input id="M-search" type="radio" name="education" value="0" />大专以下</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="N-search"><input id="N-search" type="radio" name="education" value="1" />大专</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="O-search"><input id="O-search" type="radio" name="education" value="2" />本科</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="P-search"><input id="P-search" type="radio" name="education" value="3" />研究生</label>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-item">
+                <label for="Q-search"><input id="Q-search" type="radio" name="education" value="4" />博士</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-item" style="margin-top: 14px;">
+                <label>芝麻信用：</label>
+              </div>
+            </div>
+            <div class="form-col-7">
+              <div class="form-item">
+                <div class="form-input">
+                  <input type="text" placeholder="芝麻信用分" name="creditScore" value="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-item" style="margin-top: 14px;">
+                <label>营业执照：</label>
+              </div>
+            </div>
+            <div class="form-col-7">
+              <div class="form-item">
+                <div class="form-input">
+                  <input type="text" placeholder="营业执照" name="company" value="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-item">
+                <label> </label>
+              </div>
+            </div>
+            <div class="form-col-7">
+              <div class="form-item">
+                <button class="btn" id="btnSearch">筛选</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </header>
+
+    <div class="search-result">
+      <div class="search-total">搜索结果：共有<span id="total">0</span>条记录</div>
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">姓名</th>
+            <th rowspan="2">电话</th>
+            <th rowspan="2">征信状况</th>
+            <th rowspan="2">学历</th>
+            <th colspan="2">信用卡</th>
+            <th rowspan="2">公积金</th>
+          </tr>
+          <tr>
+            <th>开卡银行</th>
+            <th>额度</th>
+          </tr>
+        </thead>
+        <tbody id="searchList">
+          <tr>
+            <td colspan="7">暂无数据</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/customer/customer-search')
+    </script>
+
+  </section>
+</template>
